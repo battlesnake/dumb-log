@@ -1,0 +1,15 @@
+bin/
+build/
+.gradle/
+.*.swp
+.*.swo
+
+# Eclipse
+.metadata/
+.recommenders/
+
+# specific to specifications
+specifications/tmp/
+specifications/out/
+
+.settings/
