@@ -7,9 +7,10 @@ build/
 # Eclipse
 .metadata/
 .recommenders/
+.project
+.classpath
+.settings/
 
 # specific to specifications
 specifications/tmp/
 specifications/out/
-
-.settings/
