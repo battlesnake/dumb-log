@@ -6,6 +6,10 @@ public interface LoggerInterface {
 
 	public void write(Level level, String format, Object... values);
 
+	public void fatal(Exception err, String format, Object... values);
+
+	public void error(Exception err, String format, Object... values);
+
 	public void fatal(String format, Object... values);
 
 	public void error(String format, Object... values);
