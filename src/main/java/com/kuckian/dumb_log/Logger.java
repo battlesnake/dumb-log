@@ -1,6 +1,7 @@
 package com.kuckian.dumb_log;
 
 import java.util.Date;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Arrays;
 
@@ -34,7 +35,7 @@ public class Logger implements LoggerInterface {
 	@Override
 	public void fatal(Exception err, String format, Object... values) {
 		format += ":\n\t%s";
-		List<Object> args = Arrays.asList(values);
+		List<Object> args = new LinkedList<Object>(Arrays.asList(values));
 		args.add(err);
 		write(Level.FATAL, format, args.toArray());
 	}
@@ -42,7 +43,7 @@ public class Logger implements LoggerInterface {
 	@Override
 	public void error(Exception err, String format, Object... values) {
 		format += ":\n\t%s";
-		List<Object> args = Arrays.asList(values);
+		List<Object> args = new LinkedList<Object>(Arrays.asList(values));
 		args.add(err);
 		write(Level.ERROR, format, args.toArray());
 	}
