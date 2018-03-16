@@ -1,4 +1,7 @@
 apply plugin: 'java'
+apply plugin: 'eclipse'
+
+apply from: 'common-build.gradle'
 
 group = 'com.kuckian'
 version = '1.4'
@@ -10,4 +13,12 @@ targetCompatibility = 8
 
 tasks.withType(JavaCompile) {
 	options.encoding = 'UTF-8'
+}
+
+sourceSets {
+	main {
+		java {
+			srcDir "src/main/java"
+		}
+	}
 }
